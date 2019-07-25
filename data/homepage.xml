@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="aboutcg" model="ir.ui.view">
+            <field name="name">About CG</field>
+            <field name="type">qweb</field>
+            <field name="key">website.aboutcg</field>
+            <field name="arch" type="xml">
+                <t name="About CG" t-name="cluster_game.aboutcg">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'About CG'"/>
+                        <div id="wrap">
+                            <div class="oe_structure">
+                                <section class="pt8 pb8">
+                                    <div class="container">
+                                        <div class="row s_nb_column_fixed">
+                                            <div class="col-lg-12 s_title pt16 pb16">
+                                                <h2 class="text-center">About CG</h2>
+                                                <h3 class="text-muted text-center"></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_text_image pt8 pb8">
+                                    <div class="container">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-12 pt16 pb16">
+                                                <p>
+                                                    最近犹抱琵琶半遮面地给不少朋友推荐了一些赚币方式和项目，朋友问我，为什么不说个干脆明白，非要这么拧巴。
+                                                    故事其实要从当初我把人带沟里去开始说。。。
+                                                </p>
+                                                <p>
+                                                    几个月前，参与某项目，我个人非常看好赚钱钱景，但风险确实大，我自己也就放进去几百个柚子。忍不住跟不少人推荐了这个项目，虽然再三再三强调风险，强调要用可以亏完也不心疼的钱参与，但过了几天还是有人跑来告诉我，自己用1/3仓位参与进去了。
+                                                    然后悲剧的是，这个项目跑路了。我自己其实因为仓位控制很少，赔得不多，但很快，我就想起那个1/3仓位都重仓进去的人……他没有来找我维权或者算账，但我自己心里非常非常不好受。
+                                                    前天我在知识星球分享了几个赚币项目，很快，就有人问老白，这些会不会有风险，会不会不安全。
+                                                </p>
+                                                <p>
+                                                    然后，微信收到好几个朋友的信息，询问相关事项。
+                                                </p>
+                                                <p>再往前，有一次，我分享了最近在赚币赚钱的几个方向，很快就有不少朋友微信问我具体的项目名称，我基本都没有给出明确答案。
+                                                </p>
+                                                <p>有一位没有得到明确答案的朋友问我：是不是项目可以容纳的赚钱资金量太少，怕告诉我们了你自己没得赚啊？
+                                                </p>
+                                                <p>说实话，在特定的情况下，比如搬砖某币种，确实会出现利润还不够一个人吞的情况。但赚币的项目，不可能是容量只有那么一点的。
+                                                </p>
+                                                <p>老白的朋友看老白每次讲这些都欲言又止，笑问是不是故弄玄虚，我……
+                                                </p>
+                                                <p>
+                                                    我自己参与任何一个赚币的项目或者方式，配置的资金都是有严格的比例的，不会梭哈，也不会超额，也会有止损计划，甚至一开始就想好了最极端的赔完情况。
+                                                </p>
+                                                <p>
+                                                    市面上，风险收益性价比高的赚币方式其实有，但收益率高的，总体来讲也是伴随相应的风险。我因为在各个项目各处都有做分散，所以一组事件来讲，整体风险并不大。
+                                                </p>
+                                                <p>
+                                                    所以，那次把人带沟里去以后，我是不太敢再跟人推荐风险较大的项目参与了。虽然有些项目风险我自己评估下来其实不大，但我也不会给人家项目做背书，告诉别人风险不大，而只会说，我在参与，但风险需要大家根据自己情况评估。
+                                                </p>
+                                                <p>
+                                                    我自己来讲，目前同期在赚币的项目有6个，在交易操作的赚钱方式有两个。这里面根据风险收益情况的各不相同，我每个都只是配置了一部分资金进去。万一哪个踩雷，也不会很伤。但一旦给人推荐出来，别人由于操作不按纪律、不做分散等各种情况，导致最后万一玩亏了，就算不来找我算账，“我不杀伯仁，伯仁却因我而死”。
+                                                </p>
+                                                <p>
+                                                    所以，我能给出的最好的方式，是点到即止。这就像一张过滤网，把没有自卫能力的人过滤在外面了。真的有相应的能力的人，感兴趣的，看到我给出的信息，自己其实可以顺藤摸瓜去找到，毕竟现在信息都很透明了。这部分人相对来说算老手，不太会过于冒进。而只看到收益，看不到风险的，也会因为语焉不详，找不到老白提及的具体的方向。
+                                                </p>
+                                                <p>所以，我之前在星球分享相关讯息的时候，会说“有心人自己可以根据这些信息找到”。我不是在故意制造门槛，我只是想这样子比较安全地分享出来。
+                                                </p>
+                                                <p>
+                                                    其实进一步讲，比如前天咕噜博士的分享，他提及的币，其实也是大饼、以太等几个大家都比较熟悉的主流币，在那样的场合，他未必是不愿意、而是不方便提及更多他持有的小币种。
+                                                </p>
+                                                <p>一样的，币乎这么多作者这么多文章，其实信息量非常大，但大家最常提及的，还是比特币、柚子、KEY等几个社区里都很熟悉的币。
+                                                </p>
+                                                <p>因为这样不太会有把人带沟里去的后顾之忧。
+                                                </p>
+                                                <p>但你真要是有心人，其实币乎文章的信息量已经很大了，不少作者也会在各种地方时不时给到很多线索。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="mycg" model="ir.ui.view">
+            <field name="name">My CG</field>
+            <field name="type">qweb</field>
+            <field name="key">website.mycg</field>
+            <field name="arch" type="xml">
+                <t name="Home" priority="29" t-name="cluster_game.mycg">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'MyCG'"/>
+                        <div id="wrap" class="oe_structure oe_empty"/>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="myqrcard" model="ir.ui.view">
+            <field name="name">My Qrcard</field>
+            <field name="type">qweb</field>
+            <field name="key">website.myqrcard</field>
+            <field name="arch" type="xml">
+                <t name="myqrcard" priority="29" t-name="cluster_game.myqrcard">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'myqrcard'"/>
+                        <div id="wrap" class="oe_structure oe_empty"/>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="kingline" model="ir.ui.view">
+            <field name="name">King Line</field>
+            <field name="type">qweb</field>
+            <field name="key">website.kingline</field>
+            <field name="arch" type="xml">
+                <t name="kingline" priority="29" t-name="cluster_game.kingline">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'kingline'"/>
+                        <div id="wrap" class="oe_structure oe_empty"/>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <!--</data>-->
+
+        <!--<data noupdate="0">-->
+        <record id="aboutcg_page" model="website.page">
+            <field name="url">/aboutcg</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="aboutcg"/>
+        </record>
+        <record id="mycg_page" model="website.page">
+            <field name="website_published">True</field>
+            <field name="url">/mycgaccount</field>
+            <field name="view_id" ref="mycg"/>
+        </record>
+        <record id="myqrcard_page" model="website.page">
+            <field name="website_published">True</field>
+            <field name="url">/myqrcard</field>
+            <field name="view_id" ref="myqrcard"/>
+        </record>
+        <record id="kingline_page" model="website.page">
+            <field name="website_published">True</field>
+            <field name="url">/kingline</field>
+            <field name="view_id" ref="kingline"/>
+        </record>
+
+        <record id="menu_home" model="website.menu">
+            <field name="name">投注</field>
+            <field name="url">/</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">10</field>
+        </record>
+        <record id="menu_mycgaccount" model="website.menu">
+            <field name="name">我的账户</field>
+            <field name="url">/mycgaccount</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">51</field>
+        </record>
+        <record id="menu_myqrcard" model="website.menu">
+            <field name="name">我的推荐二维码</field>
+            <field name="url">/myqrcard</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">53</field>
+        </record>
+        <record id="menu_kingline" model="website.menu">
+            <field name="name">KING 排名</field>
+            <field name="url">/kingline</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">54</field>
+        </record>
+        <record id="menu_aboutcg" model="website.menu">
+            <field name="name">关于 Cluster Game</field>
+            <field name="url">/aboutcg</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">60</field>
+        </record>
+
+        <!--<record id="default_website" model="website">-->
+        <!--<field name="name">Cluster Game</field>-->
+        <!--<field name="domain"></field>-->
+        <!--<field name="company_id" ref="base.main_company"/>-->
+        <!--<field name="user_id" ref="base.public_user"/>-->
+        <!--<field name="favicon" type="base64" file="web/static/src/img/favicon.ico"/>-->
+        <!--<field name="homepage_id" ref="website.homepage_page"/>-->
+        <!--</record>-->
+    </data>
+</odoo>

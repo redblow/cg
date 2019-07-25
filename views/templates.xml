@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- assets -->
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Slide">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/cluster_game/static/style.scss" t-ignore="true"/>
+            </xpath>
+        </template>
+
+        <template id="footer_replace" inherit_id="portal.frontend_layout" name="footer replace">
+            <xpath expr="//footer[@class='bg-light o_footer']" position="replace"/>
+            <xpath expr="//ul[@id='top_menu']" position="attributes">
+                <attribute name="class">nav navbar-nav ml-auto</attribute>
+            </xpath>
+        </template>
+
+        <template id="graphene_header" inherit_id="website.layout" name="Graphene Header">
+            <xpath expr="//div[@id='wrapwrap']/header/nav" position="attributes">
+                <attribute name="class">navbar navbar-expand-md navbar-light bg-light clu-bg-black</attribute>
+            </xpath>
+            <xpath expr="//div[@id='wrapwrap']/header/nav//li[@class='nav-item divider']" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+        </template>
+
+        <template id="portal_show_sign_in_display_divider" inherit_id="portal.portal_show_sign_in"
+                  name="Display Divider">
+            <xpath expr="//ul[@id='top_menu']//li[hasclass('divider')]" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+        </template>
+
+        <template id="layout_logo_show" inherit_id="website.layout" customize_show="True" name="Show Logo">
+            <xpath expr="//header//a[hasclass('navbar-brand')]" position="replace">
+                <a href="/" class="navbar-brand logo">
+                    <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img"
+                          t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                </a>
+            </xpath>
+        </template>
+
+        <template id="portal.portal_show_sign_in" inherit_id="portal.frontend_layout" name="Show Sign In">
+            <xpath expr="//ul[@id='top_menu']" position="inside">
+                <li class="nav-item divider" style="display:none;" groups="base.group_public"/>
+                <li groups="base.group_public" class="nav-item">
+                    <a t-attf-href="/web/login" class="nav-link">
+                        <b>Sign in</b>
+                    </a>
+                </li>
+            </xpath>
+
+        </template>
+
+        <!--<template id="my_account_link_replace" name="Link to frontend portal" inherit_id="portal.my_account_link">-->
+            <!--<xpath expr="//a[@href='/my/account']" position="replace"/>-->
+        <!--</template>-->
+
+        <template id="cluster_hp" inherit_id="website.homepage" name="Cluster Game">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="cluster">
+                    <div class="row">
+                        <div class="col-md-4 clu-1">
+                            <div class="clu-2">
+                                <label>当前 CG 价格</label>
+                                <div>
+                                    <span class="clu-price">1 CG =</span>
+                                    <span class="clu-price">0.0120 EOS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 clu-1">
+                            <div class="clu-2">
+                                <label>奖池累积总量</label>
+                                <div class="clu-price">1,000,000.0000 EOS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 clu-1">
+                            <div class="clu-2">
+                                <label>当前回购池总量</label>
+                                <div class="clu-price">1,000,500.0000 EOS</div>
+                            </div>
+                        </div>
+
+                        <!--<div class="col-md-4 clu-1">-->
+                        <!--<div class="clu-2 clu-3">-->
+                        <!--<label class="clu-title">当前 KING 排名</label>-->
+                        <!--<div>-->
+                        <!--<h5 class="pull-left text-left mb8">当加入人数达到 1000 人时，开奖。排名第一的夺得 KING，KING-->
+                        <!--将夺得他推广奖励的5%。-->
+                        <!--</h5>-->
+                        <!--<div class="clu-3-1">-->
+                        <!--<div>-->
+                        <!--<label class="pull-left">实时加入人数</label>-->
+                        <!--<span class="pull-right clu-value">1,000</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div>-->
+
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="col-md-8 clu-1">
+                            <div class="row">
+                                <div class="col-md-6 img">
+                                    <!--<label class="clu-title">合约地址 clustergames</label>-->
+                                    <div t-attf-class="col-md-12">
+                                        <img>
+
+                                        </img>
+                                        <p>
+                                            请使用手机钱包扫描二维码进行投注支付
+                                            <br/>
+                                            请核对备注（MEMO）为：投注
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 clu-2 clu-4">
+                                    <label class="clu-title">投注金额</label>
+                                    <div class="clu-price">1,000,000.0000 CG</div>
+                                    <!--<div t-attf-class="col-xl-12">-->
+                                        <!--<input type="text" name="下注"/>-->
+                                        <!--<span type="text">EOS</span>-->
+                                    <!--</div>-->
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="" autocomplete="off" autofocus="autofocus"
+                                               onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,4})?/)"
+                                               aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2">EOS</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="clearfix">
+                                        <button type="submit"
+                                                class="rounded-circle btn btn-outline-warning rounded-circle mb32 ">
+                                            下注
+                                        </button>
+                                    </div>
+                                    <p>合约地址
+                                        <br/>
+                                        <h2>clustergames</h2>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 clu-1">
+                            <div class="clu-2 clu-3">
+                                <label class="clu-title">当前 KING 排名</label>
+                                <div class="">
+                                    <h5 class="pull-left text-left mb8">参加人数每满 1000，即进行一次开奖。排名第一的参与者夺得 KING，KING
+                                        得主将获得其推广奖励的 5%。
+                                    </h5>
+                                    <div class="clu-3-1">
+                                        <div>
+                                            <label class="pull-left">实时参加人数</label>
+                                            <span class="pull-right clu-value">1,000</span>
+                                        </div>
+                                    </div>
+                                    <t t-call="cluster_game.cluster_game_king_list"/>
+                                    <div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 clu-1">
+                            <div class="clu-2 clu-5">
+                                <label class="clu-title">最后 77 名玩家</label>
+                                <div class="mt32">
+                                    <div class="clu-5-1">
+                                        <label class="">最后 77 名玩家总奖金</label>
+                                        <br/>
+                                        <span class="clu-value">98,000.0001 EOS</span>
+                                    </div>
+                                    <div class="clu-5-2">
+                                        <label class="">最后 77 名玩家人均奖金</label>
+                                        <br/>
+                                        <span class="clu-value">950.0001 EOS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 clu-1">
+                            <div class="clu-2 clu-7">
+                                <div>
+                                    <label>实时交易记录</label>
+                                </div>
+                                <t t-call="cluster_game.cluster_game_trans_list"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="my_cg" inherit_id="cluster_game.mycg" name="My CG">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="oe_structure">
+                    <section class="pt8 pb8">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16">
+                                    <label>请输入 EOS 账号进行查询</label>
+                                    <h3>
+                                        <input class="col-md-6" autofocus="autofocus" maxlength="12" onkeyup="this.value=this.value.toUpperCase()" ></input>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="cluster container">
+                    <div class="row">
+                        <div class="col-md-6 clu-1">
+                            <div class="clu-5-3">
+                                <div class="clu-5-3-1">
+                                    <label class="">EOS 余额</label>
+                                    <div class="clu-price">1,000,000.0120</div>
+                                </div>
+                                <div class="clu-5-3-1">
+                                    <label class="">CG 余额</label>
+                                    <div class="clu-price">1,000,000,000.0120</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 clu-1">
+                            <div class="clu-5-3">
+                                <div class="clu-5-3-1">
+                                    <label class="">我的团队总收益</label>
+                                    <div class="clu-price">1,000,000.0120 EOS</div>
+                                </div>
+                                <div class="clu-5-3-1">
+                                    <label class="">我的分红收益</label>
+                                    <div class="clu-price">1,000,000,000.0120 EOS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure mt-2"/>
+            </xpath>
+        </template>
+
+        <template id="cluster_game_trans_list" name="Portal: Cluster Game Trans List">
+            <div t-attf-class="table-responsive border-top-0 clu-table #{classes if classes else ''}">
+                <table class="table rounded mb-0 o_portal_my_doc_table">
+                    <thead>
+                        <tr class="active">
+                            <th>账号 #</th>
+                            <th>操作类型</th>
+                            <th></th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="cluster_game" t-as="cg">
+                            <tr>
+                                <td>
+                                    <!--<a t-attf-href="/my/purchase/#{order.id}?#{keep_query()}">-->
+                                    <t t-esc="cg.name"/>
+                                    <!--</a>-->
+                                    111122225555
+                                </td>
+                                <td>
+                                    <!--<span t-field="cg.action_name"/>-->
+                                    投注
+                                </td>
+                                <td>
+                                    <!--<span t-field="cg.order_time"-->
+                                    <!--t-options='{"widget": "monetary"}'/>-->
+                                    2019-05-05 12:00:00
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+
+                    <t t-raw="0"/>
+                </table>
+            </div>
+        </template>
+
+        <template id="cg_myqrcard" inherit_id="cluster_game.myqrcard" name="Cluster Game My Qrcard">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="oe_structure">
+                    <section class="pt8 pb8">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16">
+                                    <label>请输入 EOS 账号生成推荐二维码</label>
+                                    <h3>
+                                        <input class="col-md-6" autofocus="autofocus" maxlength="12" onkeyup="this.value=this.value.toUpperCase()" ></input>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container">
+                            <div class="col-md-12 clu-myqrcard">
+                                <div t-attf-class="col-md-12">
+                                    <img></img>
+                                    <p>
+                                        请使用手机钱包扫描推荐二维码进行投注支付
+                                        <br/>
+                                        请核对备注（MEMO）为：投注 推荐人 aaaabbbbcccc
+                                    </p>
+                                    <p>
+                                        <a href="#">
+                                            推荐链接：clustergames
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="cg_kingline" inherit_id="cluster_game.kingline" name="Cluster Game King Line">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="oe_structure">
+                    <section class="pt8 pb8">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16">
+                                    <label>请输入 EOS 账号进行查询</label>
+                                    <h3>
+                                        <input class="col-md-6" autofocus="autofocus" maxlength="12" onkeyup="this.value=this.value.toUpperCase()" ></input>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container clu-kingline">
+                            <span>您的当前名次：</span>
+                            <span>1</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="container">
+                    <t t-call="cluster_game.cluster_game_king_list"/>
+                </div>
+            </xpath>
+        </template>
+        <template id="cluster_game_king_list" name="Portal: Cluster Game King List">
+            <div t-attf-class="table-responsive border-top-0 clu-table #{classes if classes else ''}">
+                <table class="table rounded mb-0 o_portal_my_doc_table">
+                    <thead>
+                        <tr class="active">
+                            <th>账号#</th>
+                            <th>推广数</th>
+                            <th>团队投资</th>
+                            <th></th>
+                            <th>排名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="cluster_game" t-as="cg">
+                            <tr>
+                                <td>
+                                    <!--<a t-attf-href="/my/purchase/#{order.id}?#{keep_query()}">-->
+                                    <t t-esc="cg.name"/>
+                                    <!--</a>-->
+                                    123451234555
+                                </td>
+                                <td>
+                                    <!--<span t-field="cg.action_name"/>-->
+                                    10,000
+                                </td>
+                                <td>
+                                    <!--<span t-field="cg.order_time"-->
+                                    <!--t-options='{"widget": "monetary"}'/>-->
+                                    98,000.0000 EOS
+                                </td>
+                                <td>
+                                    <!--<span t-field="cg.order_time"-->
+                                    <!--t-options='{"widget": "monetary"}'/>-->
+                                    1
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                    <t t-raw="0"/>
+                </table>
+            </div>
+        </template>
+
+    </data>
+</odoo>

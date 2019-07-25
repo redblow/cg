@@ -1,0 +1,278 @@
+.cluster {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  color: white;
+
+  label {
+    font-size: 1.1rem;
+    color: grey;
+  }
+
+  button {
+    width: 75%;
+    height: 45px;
+    margin: 25px;
+    font-size: 1.2rem !important;
+  }
+
+  .row {
+    margin: 5px;
+
+    .clu-5 {
+      background-color: rgb(23, 30, 38);
+    }
+  }
+
+  .col-md-12 {
+    margin: 8px !important;
+    padding: 8px !important;
+  }
+}
+
+.clu-1 {
+  margin-bottom: 12px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+
+  .row {
+    margin: 0;
+    background-color: rgb(23, 30, 38);
+
+    .img {
+      font-size: 1rem !important;
+      margin-top: 30px;
+      text-align: center;
+      color: #feb535;
+    }
+
+    img {
+      width: 280px;
+      height: 280px;
+      //background-color: rgb(23, 30, 38);
+      margin-bottom: 12px;
+      border: 1px solid !important;
+    }
+  }
+}
+
+.clu-2 {
+  background-color: rgb(23, 30, 38);
+  height: auto;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.clu-bg-black {
+  .container {
+    margin: 0 10px !important;
+    max-width: 100%;
+    z-index: 1000 !important;
+  }
+}
+
+.navbar-nav > li > a {
+  color: white !important;
+}
+
+.clu-price {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #c12824;
+  //margin-bottom: 15px;
+}
+
+.clu-3 {
+  height: auto;
+  min-height: 450px;
+
+  h5 {
+    color: #888888;
+    margin-top: 12px;
+  }
+
+  .clu-3-1 div {
+    height: 95px;
+
+    label {
+      font-size: 16px;
+      margin-top: 4px;
+    }
+
+    .clu-value {
+      font-size: 1.6em;
+      color: #feb535;
+      text-align: center !important;
+    }
+  }
+
+}
+
+.clu-4 {
+  height: auto;
+  min-height: 450px;
+
+  input {
+    height: 45px;
+    margin-top: 20px;
+    background-color: rgb(174, 132, 5);
+    border: 0;
+    color: whitesmoke;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 0 !important;
+    //-webkit-tap-highlight-color: rgba(255, 0, 0, 1) !important;
+    outline: none !important;
+  }
+
+  span {
+    height: 45px;
+    font-size: 1.8rem;
+    color: #fbfff6;
+    margin-top: 20px;
+    padding: 6px;
+    border: 1px solid rgb(174, 132, 5);
+    background-color: rgb(174, 132, 5);
+  }
+
+  label {
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 16px !important;
+    color: grey;
+    margin: 0;
+  }
+}
+
+.clu-5 {
+  height: auto;
+
+  .clu-5-1 {
+    > label {
+      margin-top: 4px;
+      margin-bottom: 4px;
+
+    }
+  }
+
+  .clu-5-2 {
+    margin-top: 25px;
+
+    > label {
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .clu-5-3 {
+    height: auto !important;
+    min-height: 200px !important;
+
+    .clu-5-3-1 {
+    }
+  }
+
+}
+
+.clu-6 {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.clu-7 {
+  height: 400px;
+  text-align: center !important;
+  background-color: rgb(23, 30, 38);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.clu-value {
+  font-size: 2rem;
+  //color: #feb535;
+  color: #c12824;
+
+}
+
+.clu-title {
+  font-size: 1.6rem !important;
+  color: grey;
+}
+
+.align-items-center {
+  p {
+    font-size: 16px;
+    color: grey;
+  }
+}
+
+.s_title {
+  label {
+    font-size: 1.1rem;
+    color: grey;
+  }
+
+  .col-md-6 {
+    padding: 0;
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(174, 132, 5) !important;
+    color: whitesmoke;
+    font-size: 1.6rem !important;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 1) !important;
+  }
+}
+
+.clu-table {
+  table {
+    thead {
+      tr {
+        th {
+          border-top: 0;
+          border-bottom: 1px solid grey;
+          text-align: left;
+          color: grey;
+        }
+      }
+    }
+  }
+
+}
+
+.clu-myqrcard {
+  text-align: center;
+
+  p {
+    font-size: 16px !important;
+    margin-top: 30px;
+    text-align: center;
+    color: #feb535;
+  }
+
+  img {
+    width: 280px;
+    height: 280px;
+    //background-color: rgb(23, 30, 38);
+    margin-bottom: 12px;
+    border: 1px solid #feb535;
+  }
+}
+
+.clu-kingline {
+  margin-bottom: 15px;
+
+  span {
+    font-size: 18px !important;
+    //margin-top: 30px;
+    //text-align: center;
+    color: #feb535;
+  }
+}
